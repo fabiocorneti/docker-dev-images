@@ -1,0 +1,7 @@
+.git
+/spec
+circle.yml
+LICENSE
+Rakefile
+Gemfile
+Gemfile.lock

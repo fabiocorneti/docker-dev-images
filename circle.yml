@@ -1,0 +1,14 @@
+machine:
+  ruby:
+    version: '2.2'
+  services:
+    - docker
+
+dependencies:
+  override:
+    - bundle install
+
+test:
+  override:
+    - bundle exec rake
+
