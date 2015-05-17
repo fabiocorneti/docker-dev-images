@@ -3,8 +3,6 @@
 
 require 'serverspec'
 require 'docker'
-require 'excon'
-Excon.defaults[:ssl_verify_peer] = false
 
 # Workaround needed for circleCI
 if ENV['CIRCLECI']
