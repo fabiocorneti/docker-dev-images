@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -e
+set -e
 
 POSTGRES_USER=${POSTGRES_USER:-"dbuser"}
 POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-"password"}
@@ -8,7 +8,7 @@ POSTGRES_ARGS="-D $PGDATA --config-file=/etc/pgsql/postgresql.conf"
 
 if [ ! -d $PGDATA ]; then
     mkdir -p $PGDATA
-    chown -R postgres $PGDATA
+    chown postgres:postgres $PGDATA
     su - postgres -c "$PG_HOME/bin/initdb -D $PGDATA -E 'UTF-8'"
 fi
 
