@@ -1,4 +1,4 @@
-FROM centos:7
+FROM corneti/centos-dev:latest
 MAINTAINER Fabio Corneti <info@corneti.com>
 
 ENV PG_HOME /usr/pgsql-9.4
